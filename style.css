@@ -1,0 +1,255 @@
+   /*--- GENERAL ---*/
+
+body,
+html {font-family: 'Titillium Web', sans-serif;
+    height: 100%;
+}
+
+/*--- Navigation ---*/
+
+
+ /*--- HEADER ---*/
+
+
+    
+header { 
+    /* The image used */
+    background-image: url(img/background.jpg);
+
+    /* Full height */
+    height: 100%; 
+   
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.text-faded {
+    background-color: rgba(234, 229, 229, 0.83);
+    -webkit-transform: rotate(-9deg);
+    transform: rotate(-9deg);
+        margin-top: 20%;
+    margin-left: 20%
+}
+
+
+.btn{
+      -webkit-transition: -webkit-transform 2s;
+      transition: -webkit-transform 2s;
+      transition: transform 2s;
+      transition: transform 2s, -webkit-transform 2s;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+ 
+}
+
+.header-button {
+   
+      margin-left: 70%
+}
+
+
+
+.btn:hover{
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+
+@media only screen and (max-width:991px){ 
+    .text-faded {font-size: 150%;
+        margin-top: 25%;
+         margin-left: 10%}
+}
+   /*--- SERVICES ---*/
+
+
+.section-services {
+    padding-bottom: 300px;
+    position: relative;
+}
+
+
+::-webkit-scrollbar{width:1px;height:1px;}
+::-webkit-scrollbar-button{width:1px;height:1px;}
+
+div{
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+
+
+.horizontal-scroll-wrapper{
+  
+  display:block;
+position:absolute;
+    left: -40%;
+    top: 52%;
+  width:300px;
+  max-height:2000px;
+  margin:0;
+  
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-transform:rotate(-90deg) translateY(-30px);
+  transform:rotate(-90deg) translateY(-30px);
+  -webkit-transform-origin:right top;
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  padding:5px;
+  
+  -webkit-transform:rotate(90deg);
+  
+  transform:rotate(90deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+}
+
+.rectangles{
+  
+  padding:0;
+}
+.rectangles > div{
+  width:250px;
+  height:350px;
+  margin:0;
+  padding:0;
+
+  -webkit-transform:rotate(90deg) translateY(10px);
+
+  transform:rotate(90deg) translateY(10px);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+}
+
+
+@media only screen and (max-width:767px){
+    .horizontal-scroll-wrapper{ top: 65%;
+       max-height:1200px; 
+        left: -50%;}
+        .section-services {
+        padding-bottom: 250px;}
+       .text-faded {font-size:130%;
+        margin-top: 30%;
+         margin-left: 0;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);}
+    .btn {font-size: 70%;}
+}
+
+@media only screen and (max-width:575px){
+    .horizontal-scroll-wrapper{ display: none}
+    .section-services {
+        padding-bottom: 0;}
+   .text-faded {font-size:110%;
+        margin-top: 35%;
+        }
+}
+
+   /*--- PORTFOLIO ---*/
+
+
+
+
+
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+ margin: 0 auto;}
+
+
+  
+
+.box{
+    text-align: center;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    position: relative;
+}
+.box:before,
+.box:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(11,33,47,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.box:after{
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #0dab76;
+    top: 0;
+    left: 170%;
+    opacity: 1;
+    z-index: 1;
+    -webkit-transform: skewX(45deg);
+    transform: skewX(45deg);
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+.box:hover:before{ opacity: 1; }
+.box:hover:after{ left: -170%; }
+.box img{
+    width: 100%;
+    height: auto;
+}
+.box .box-content{
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.box:hover .box-content{ bottom: 30%; }
+.box .title{
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.box .post{
+    display: block;
+
+    font-weight: 600;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width:990px){
+    .box{ margin-bottom: 30px; }
+}
+
+
+   /*--- CONTACTS ---*/
+a {
+    color: #424548;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #131314;
+    text-decoration: underline;
+}
+    
+.icon-small {
+    font-size: 150%;
+}
